@@ -22,25 +22,40 @@
       <h1>Contact Us</h1>
       <form>
         <div class="name">
-          <label for="fname">First name:</label>
-          <input type="text" required id="fname" name="fname" />
-          <label for="lname">Last name:</label>
-          <input type="text" required id="lname" name="lname" />
+          <div>
+            <label for="fname">First name:</label>
+            <input type="text" required id="fname" name="fname" />
+          </div>
+          <div>
+            <label for="lname">Last name:</label>
+            <input type="text" required id="lname" name="lname" />
+          </div>
         </div>
         <div class="email">
           <label for="email">Email:</label>
           <input type="text" required id="email" name="email" />
         </div>
+
         <h2 class="label-title">Query Type</h2>
-        <input type="radio" required id="general" name="general" />
-        <label for="general"> General Enquiry</label>
-        <input type="radio" id="support" name="support" />
-        <label for="support"> Support Request</label>
-        <textarea required id="message" name="message"></textarea>
+        <div class="radio-wrapper">
+          <div class="radio-item">
+            <input type="radio" required id="general" name="general" />
+            <label for="general"> General Enquiry</label>
+          </div>
+
+          <div class="radio-item">
+            <input type="radio" id="support" name="support" />
+            <label for="support"> Support Request</label>
+          </div>
+        </div>
+
         <label for="message"> Message</label>
-        <input type="checkbox" required id="consent" name="consent" />
-        <label for="consent"> I consent to being contacted by the team</label>
-        <input type="submit" value="Submit" />
+        <textarea required id="message" name="message"></textarea>
+        <div>
+          <input type="checkbox" required id="consent" name="consent" />
+          <label for="consent"> I consent to being contacted by the team</label>
+        </div>
+        <input type="submit" value="Submit" id="submit" />
       </form>
     </main>
 
