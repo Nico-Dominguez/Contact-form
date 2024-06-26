@@ -18,12 +18,21 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    Contact Us First Name This field is required Last Name This field is
-    required Email Address Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required I consent to being contacted by the team
-    To submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <main class="wrapper">
+      <h1>Contact Us</h1>
+      <form>
+        <div class="name">
+          <label for="fname">First name:</label>
+          <input type="text" required id="fname" name="fname" />
+          <label for="lname">Last name:</label>
+          <input type="text" required id="lname" name="lname" />
+        </div>
+        <div class="email">
+          <label for="email">Email:</label>
+          <input type="text" required id="email" name="email" />
+        </div>
+      </form>
+    </main>
 
     <div class="attribution">
       Challenge by

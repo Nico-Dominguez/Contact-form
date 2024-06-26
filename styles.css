@@ -1,13 +1,39 @@
+
+:root {
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%)
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* form */
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  background-color: var(--green-200);
+}
+
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-
-body {
-  color: red;
-  font-size: 1rem;
 }
