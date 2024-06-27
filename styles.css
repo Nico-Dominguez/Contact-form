@@ -1,8 +1,7 @@
-@font-face { 
+@font-face {
   font-family: "Karla", sans-serif;
-  src : "./assets/Karla";
+  src: "./assets/Karla";
 }
-
 
 :root {
   --green-200: hsl(148, 38%, 91%);
@@ -40,7 +39,7 @@ body {
   min-height: 100svh;
   background-color: var(--green-200);
   color: var(--green-800);
- font-family: "Karla", sans-serif; 
+  font-family: "Karla", sans-serif;
 }
 
 .wrapper {
@@ -48,7 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   width: clamp(320px, 500px, 600px);
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
 }
 
@@ -72,10 +71,12 @@ form {
   gap: 10px;
 }
 
+h1 {
+  margin-bottom: 15px;
+}
 
-
-
-label, legend {
+label,
+legend {
   margin-bottom: 5px;
   display: inline-block;
 }
@@ -114,10 +115,9 @@ fieldset {
   border-radius: 5px;
 }
 
-#message-wrapper {
+.message-wrapper {
   display: flex;
   flex-direction: column;
-
 }
 
 textarea {
@@ -131,4 +131,18 @@ textarea {
   padding: 10px;
   border-radius: 5px;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .name {
+    flex-direction: column;
+  }
+
+  fieldset {
+    flex-direction: column;
+  }
+
+  textarea {
+    height: 200px;
+  }
 }
