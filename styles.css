@@ -143,8 +143,12 @@ textarea {
   }
 }
 
-input[missing="true"] {
-  border: 1px solid red;
+/* input[missing="true"] {
+  border: 1px solid var(--red);
+} */
+
+.error {
+  border: 1px solid var(--red);
 }
 
 @media (max-width: 885px) {
