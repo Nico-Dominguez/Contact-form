@@ -1,3 +1,9 @@
+@font-face { 
+  font-family: "Karla", sans-serif;
+  src : "./assets/Karla";
+}
+
+
 :root {
   --green-200: hsl(148, 38%, 91%);
   --green-600: hsl(169, 82%, 27%);
@@ -34,6 +40,7 @@ body {
   min-height: 100svh;
   background-color: var(--green-200);
   color: var(--green-800);
+ font-family: "Karla", sans-serif; 
 }
 
 .wrapper {
@@ -65,8 +72,12 @@ form {
   gap: 10px;
 }
 
-.name > label {
-  display: block;
+
+
+
+label, legend {
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
 .name input {
@@ -89,9 +100,11 @@ textarea {
   width: 100%;
 }
 
-.radio-wrapper {
+fieldset {
   display: flex;
   gap: 10px;
+  border: none;
+  padding: 0px;
 }
 
 .radio-item {
@@ -99,6 +112,12 @@ textarea {
   padding: 10px;
   border: 1px solid var(--green-800);
   border-radius: 5px;
+}
+
+#message-wrapper {
+  display: flex;
+  flex-direction: column;
+
 }
 
 textarea {

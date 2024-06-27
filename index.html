@@ -36,21 +36,27 @@
           <input type="text" required id="email" name="email" />
         </div>
 
-        <h2 class="label-title">Query Type</h2>
-        <div class="radio-wrapper">
+        <fieldset>
+        <legend class="label-title">Query Type</legend>
+    
           <div class="radio-item">
-            <input type="radio" required id="general" name="general" />
+            <input type="radio" name="query-type" id="general" name="general" />
             <label for="general"> General Enquiry</label>
           </div>
 
           <div class="radio-item">
-            <input type="radio" id="support" name="support" />
+            <input type="radio" name="query-type" id="support" name="support" />
             <label for="support"> Support Request</label>
           </div>
+
+        </fieldset>
         </div>
 
+        <div id="message-wrapper">
         <label for="message"> Message</label>
         <textarea required id="message" name="message"></textarea>
+      </div>
+
         <div>
           <input type="checkbox" required id="consent" name="consent" />
           <label for="consent"> I consent to being contacted by the team</label>
