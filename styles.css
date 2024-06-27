@@ -46,7 +46,7 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: clamp(320px, 500px, 600px);
+  width: clamp(300px, 50%, 600px);
   padding: 30px;
   border-radius: 10px;
 }
@@ -81,7 +81,7 @@ legend {
   display: inline-block;
 }
 
-.name input {
+.name-item input {
   width: 100%;
 }
 
@@ -133,7 +133,21 @@ textarea {
   color: #fff;
 }
 
-@media (max-width: 768px) {
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  & label {
+    margin-bottom: 0;
+  }
+}
+
+input[missing="true"] {
+  border: 1px solid red;
+}
+
+@media (max-width: 885px) {
   .name {
     flex-direction: column;
   }

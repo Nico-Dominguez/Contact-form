@@ -20,13 +20,13 @@
   <body>
     <main class="wrapper">
       <h1>Contact Us</h1>
-      <form>
+      <form id="form">
         <div class="name">
-          <div>
+          <div class="name-item">
             <label for="fname">First name:</label>
             <input type="text" required id="fname" name="fname" />
           </div>
-          <div>
+          <div class="name-item">
             <label for="lname">Last name:</label>
             <input type="text" required id="lname" name="lname" />
           </div>
@@ -57,7 +57,7 @@
         <textarea required id="message" name="message"></textarea>
       </div>
 
-        <div>
+        <div class="checkbox">
           <input type="checkbox" required id="consent" name="consent" />
           <label for="consent">I consent to being contacted by the team</label>
         </div>
@@ -70,5 +70,6 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
