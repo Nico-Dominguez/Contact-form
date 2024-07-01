@@ -7,6 +7,7 @@ const message = document.getElementById("message");
 const submit = document.getElementById("submit");
 
 const fNameError = document.getElementById("fname-error");
+const lNameError = document.getElementById("lname-error");
 
 // const formElements = [fName, lName, email, queryType, message];
 
