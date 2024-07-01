@@ -8,6 +8,8 @@ const submit = document.getElementById("submit");
 
 const fNameError = document.getElementById("fname-error");
 const lNameError = document.getElementById("lname-error");
+const emailError = document.getElementById("email-error");
+const messageError = document.getElementById("message-error");
 
 // const formElements = [fName, lName, email, queryType, message];
 
@@ -17,11 +19,13 @@ const lNameError = document.getElementById("lname-error");
 fName.addEventListener("input", () => {  
   if (fName.value) {
     fName.setAttribute("missing", "false");
-
+    fNameError.innerHTML = "";
   }
   else {  
     fName.setAttribute("missing", "true");
+    fNameError.innerHTML = "This field is required."
   }
+  
 });
 
 
@@ -30,5 +34,6 @@ form.addEventListener("submit", function (e) {
   e.preventDefault(); // Prevents reload on submit
   if (!fName.value) {
     fName.setAttribute("missing", "true");
+     fNameError.innerHTML = "This field is required."
   }
 });

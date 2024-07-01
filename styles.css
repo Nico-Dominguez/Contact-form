@@ -125,7 +125,7 @@ textarea {
 }
 
 /* button */
-#submit {
+#submitBtn {
   background-color: var(--green-600);
   border: none;
   padding: 10px;
