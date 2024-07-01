@@ -148,7 +148,7 @@ textarea {
 } */
 
 .error {
-  border: 1px solid var(--red);
+  border: 3px solid var(--red);
 }
 
 @media (max-width: 885px) {

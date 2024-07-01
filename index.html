@@ -20,20 +20,20 @@
   <body>
     <main class="wrapper">
       <h1>Contact Us</h1>
-      <form id="form">
+      <form autocomplete="off" id="form">
         <div class="name">
           <div class="name-item">
             <label for="fname">First name:</label>
-            <input type="text" id="fname" required name="fname" />
+            <input type="text" id="fname" name="fname" />
           </div>
           <div class="name-item">
             <label for="lname">Last name:</label>
-            <input type="text" id="lname" required name="lname" />
+            <input type="text" id="lname" name="lname" />
           </div>
         </div>
         <div class="email">
           <label for="email">Email:</label>
-          <input type="text" id="email" required name="email" />
+          <input type="text" id="email" name="email" />
         </div>
 
         <fieldset>
@@ -61,7 +61,7 @@
           <input type="checkbox" id="consent" name="consent" />
           <label for="consent">I consent to being contacted by the team</label>
         </div>
-        <input type="submit" value="Submit" id="submit" />
+        <button type="submit" id="submitBtn">Submit</button>
       </form>
     </main>
 
