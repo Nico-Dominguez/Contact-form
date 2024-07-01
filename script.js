@@ -31,16 +31,4 @@ form.addEventListener("submit", function (e) {
   if (!fName.value) {
     fName.setAttribute("missing", "true");
   }
-  if (!lName.value) {
-    lName.setAttribute("missing", "true");
-  }
-  if (!email.value) {
-    email.setAttribute("missing", "true");
-  }
-  if (!message.value) {
-    message.setAttribute("missing", "true");
-  }
 });
-
-
-
