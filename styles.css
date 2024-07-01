@@ -143,9 +143,14 @@ textarea {
   }
 }
 
-/* input[missing="true"] {
-  border: 1px solid var(--red);
-} */
+input:hover, input:focus, .radio-item:hover, textarea:hover, textarea:focus {
+  border: 2px solid var(--green-600);
+}
+
+
+ input[missing="true"], textarea[missing="true"] {
+  border: 2px solid var(--red);
+} 
 
 .error {
   border: 1px solid var(--red);

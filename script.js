@@ -8,9 +8,35 @@ const submit = document.getElementById("submit");
 
 // const formElements = [fName, lName, email, queryType, message];
 
-form.addEventListener("submit", () => {
+
+
+
+fName.addEventListener("input", () => {  
+  if (fName.value) {
+    fName.setAttribute("missing", "false");
+  }
+  else {  
+    fName.setAttribute("missing", "true");
+  }
+});
+
+
+
+form.addEventListener("submit", function (e) {
   e.preventDefault(); // Prevents reload on submit
   if (!fName.value) {
     fName.setAttribute("missing", "true");
   }
+  if (!lName.value) {
+    lName.setAttribute("missing", "true");
+  }
+  if (!email.value) {
+    email.setAttribute("missing", "true");
+  }
+  if (!message.value) {
+    message.setAttribute("missing", "true");
+  }
 });
+
+
+
