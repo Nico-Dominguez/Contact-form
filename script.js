@@ -6,6 +6,8 @@ const queryType = document.getElementsByName("query-type");
 const message = document.getElementById("message");
 const submit = document.getElementById("submit");
 
+const fNameError = document.getElementById("fname-error");
+
 // const formElements = [fName, lName, email, queryType, message];
 
 
@@ -14,6 +16,7 @@ const submit = document.getElementById("submit");
 fName.addEventListener("input", () => {  
   if (fName.value) {
     fName.setAttribute("missing", "false");
+
   }
   else {  
     fName.setAttribute("missing", "true");
