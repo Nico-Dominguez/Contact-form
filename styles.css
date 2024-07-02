@@ -77,6 +77,7 @@ h1 {
 
 label,
 legend {
+  font-size: 16px;
   margin-bottom: 5px;
   display: inline-block;
 }
@@ -89,7 +90,7 @@ input[type="text"],
 select,
 textarea {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 7px;
   border: 1px solid var(--green-800);
 }
 
@@ -134,8 +135,10 @@ textarea {
 }
 
 .checkbox {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: start;
   align-items: center;
 
   & label {
@@ -143,17 +146,35 @@ textarea {
   }
 }
 
-input:hover, input:focus, .radio-item:hover, textarea:hover, textarea:focus {
+#checkbox-error {
+  top: 16px;
+  grid-column: 1 / -1;
+}
+
+input:hover,
+input:focus,
+.radio-item:hover,
+textarea:hover,
+textarea:focus {
   border: 2px solid var(--green-600);
 }
 
+input[missing="true"],
+textarea[missing="true"] {
+  border: 1.5px solid var(--red);
+}
 
- input[missing="true"], textarea[missing="true"] {
-  border: 2px solid var(--red);
-} 
+span {
+  color: var(--green-600);
+}
 
 .error {
-  border: 3px solid var(--red);
+  color: red;
+  margin-top: 5px;
+}
+
+.radio-label {
+  margin-bottom: 0;
 }
 
 @media (max-width: 885px) {
