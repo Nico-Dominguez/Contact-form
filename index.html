@@ -20,48 +20,53 @@
   <body>
     <main class="wrapper">
       <h1>Contact Us</h1>
-      <form>
+      <form autocomplete="off" id="form">
         <div class="name">
-          <div>
-            <label for="fname">First name:</label>
-            <input type="text" required id="fname" name="fname" />
+          <div class="name-item">
+            <label for="fname">First name <span>*</span></label>
+            <input type="text" id="fname"  name="fname" />
+            <p id="fname-error" class="error"></p>
           </div>
-          <div>
-            <label for="lname">Last name:</label>
-            <input type="text" required id="lname" name="lname" />
+          <div class="name-item">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" />
+            <p id="lname-error" class="error"></p>
           </div>
         </div>
         <div class="email">
-          <label for="email">Email:</label>
-          <input type="text" required id="email" name="email" />
+          <label for="email">Email <span>*</span></label>
+          <input type="text" id="email" name="email" />
+          <p id="email-error" class="error"></p>
         </div>
 
         <fieldset>
-        <legend class="label-title">Query Type</legend>
+        <legend class="label-title">Query Type <span>*</span></legend>
     
           <div class="radio-item">
             <input type="radio" name="query-type" id="general" name="general" />
-            <label for="general"> General Enquiry</label>
+            <label for="general" class="radio-label"> General Enquiry</label>
           </div>
 
           <div class="radio-item">
             <input type="radio" name="query-type" id="support" name="support" />
-            <label for="support"> Support Request</label>
+            <label for="support" class="radio-label"> Support Request</label>
           </div>
 
         </fieldset>
         </div>
 
         <div class="message-wrapper">
-        <label for="message"> Message</label>
-        <textarea required id="message" name="message"></textarea>
+        <label for="message"> Message <span>*</span></label>
+        <textarea id="message" name="message"></textarea>
+        <p id="message-error" class="error" class="error"></p>
       </div>
 
-        <div>
-          <input type="checkbox" required id="consent" name="consent" />
+        <div class="checkbox">
+          <input type="checkbox" id="consent" name="consent" />
           <label for="consent">I consent to being contacted by the team</label>
+          <p id="checkbox-error" class="error"></p>
         </div>
-        <input type="submit" value="Submit" id="submit" />
+        <button type="submit" id="submitBtn">Submit</button>
       </form>
     </main>
 
@@ -70,5 +75,6 @@
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

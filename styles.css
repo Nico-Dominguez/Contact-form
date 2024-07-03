@@ -46,7 +46,7 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: clamp(320px, 500px, 600px);
+  width: clamp(300px, 50%, 600px);
   padding: 30px;
   border-radius: 10px;
 }
@@ -71,17 +71,24 @@ form {
   gap: 10px;
 }
 
+.name-item {
+  flex-grow: 1;
+  flex-basis: 100%; 
+
+}
+
 h1 {
   margin-bottom: 15px;
 }
 
 label,
 legend {
+  font-size: 16px;
   margin-bottom: 5px;
   display: inline-block;
 }
 
-.name input {
+.name-item > input {
   width: 100%;
 }
 
@@ -89,7 +96,7 @@ input[type="text"],
 select,
 textarea {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 7px;
   border: 1px solid var(--green-800);
 }
 
@@ -125,7 +132,7 @@ textarea {
 }
 
 /* button */
-#submit {
+#submitBtn {
   background-color: var(--green-600);
   border: none;
   padding: 10px;
@@ -133,7 +140,50 @@ textarea {
   color: #fff;
 }
 
-@media (max-width: 768px) {
+.checkbox {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: start;
+  align-items: center;
+
+  & label {
+    margin-bottom: 0;
+  }
+}
+
+#checkbox-error {
+  top: 16px;
+  grid-column: 1 / -1;
+}
+
+input:hover,
+input:focus,
+.radio-item:hover,
+textarea:hover,
+textarea:focus {
+  border: 2px solid var(--green-600);
+}
+
+input[missing="true"],
+textarea[missing="true"] {
+  border: 1.5px solid var(--red);
+}
+
+span {
+  color: var(--green-600);
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+.radio-label {
+  margin-bottom: 0;
+}
+
+@media (max-width: 885px) {
   .name {
     flex-direction: column;
   }
