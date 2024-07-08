@@ -5,7 +5,8 @@ const email = document.getElementById("email");
 const queryType = document.getElementsByName("query-type");
 const message = document.getElementById("message");
 const submit = document.getElementById("submit");
-const consentEl = document.getElementById("consent");
+const consent = document.getElementById("consent");
+const checkbox = document.getElementById("checkbox");
 
 const fNameError = document.getElementById("fname-error");
 const lNameError = document.getElementById("lname-error");
@@ -47,8 +48,8 @@ form.addEventListener("submit", function (e) {
     messageError.innerHTML = "This field is required.";
   }
 
-  if (!consentEl.checked) {
-    consentEl.setAttribute("missing", "true");
+  if (!consent.checked) {
+    consent.setAttribute("missing", "true");
     checkboxError.innerHTML =
       "To submit this form, please submit to being contacted";
   }
