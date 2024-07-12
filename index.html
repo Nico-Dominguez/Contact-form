@@ -18,28 +18,45 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <main class="wrapper">
-      <h1>Contact Us</h1>
+    <main class="container">
       <form autocomplete="off" id="form">
-        <div class="name">
-          <div class="name-item">
+        <h1>Contact Us</h1>
+        <div class="input-container">
+          <div class="input-control">
             <label for="fname">First name <span>*</span></label>
             <input type="text" id="fname"  name="fname" />
             <p id="fname-error" class="error"></p>
           </div>
-          <div class="name-item">
+          <div class="input-control">
             <label for="lname">Last name</label>
             <input type="text" id="lname" name="lname" />
             <p id="lname-error" class="error"></p>
           </div>
         </div>
+
+        
         <div class="email">
           <label for="email">Email <span>*</span></label>
           <input type="text" id="email" name="email" />
           <p id="email-error" class="error"></p>
         </div>
 
-        <fieldset>
+        <div class="radio-section">
+          <label class="radio-section-label">Query Type</label>
+          <div class="radio-control">
+            <label class="radio">
+              <input type="radio" name="radio" />
+              General Enquiry
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="radio" />
+              Support Request
+            </label>
+          </div>
+        </div>
+
+        <!-- <fieldset>
         <legend class="label-title">Query Type <span>*</span></legend>
     
           <div class="radio-item">
@@ -52,7 +69,7 @@
             <label for="support" class="radio-label"> Support Request</label>
           </div>
 
-        </fieldset>
+        </fieldset> -->
         </div>
 
         <div class="message-wrapper">
